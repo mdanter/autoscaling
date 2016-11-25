@@ -26,7 +26,7 @@ done
 TOTAL=0
 
 oc get pods -o jsonpath='{range .items[*]}{.metadata.name} {.status.podIP} {.status.phase}
-{end}' -n ${PROJECT} | egrep "^${DC}-.-..... .*Running$" | \
+{end}' -n ${PROJECT} | egrep "^${DC}-.*-..... .*Running$" | \
 while read POD IP PHASE ; do
     PORT=$(oc get service $DC -o jsonpath='{range .spec}{.ports[0].targetPort}
 {end}')
