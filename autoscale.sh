@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ksh
 #
 #set -x
 [ $# -eq 0 ] && { echo "Usage: $0 -d <dc> -n <project>"; exit 1; }
